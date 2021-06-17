@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Posts</h1>
+<ul>
+{% for post in object_list %}
+   <li><a href="{% url 'BlogDeets' post.pk%}"> {{post.title }}</a> in <a href="{% url 'category' post.category %}"> {{post.category }}</a> by {{ post.author }} <br/>
+     {{ post.snippet  }}
+  </li>
+<br/>
+{% endfor %}
+</ul>
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if category_posts %}
+
+<h1>{{ cats }} Category</h1>
+<ul>
+  {% for post in category_posts %}
+  <li><a href="{% url 'BlogDeets' post.pk%}"> {{post.title }}</a> by {{ post.author }}</li>
+
+  {% endfor %}
+</ul>
+
+{% else %}
+No post in this category exists.
+
+{% endif %}
+{% endblock %}

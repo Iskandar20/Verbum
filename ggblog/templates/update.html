@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title%}Edit Blogs{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated%}
+ {% if user.id == post.author.id %}
+        <h1>Edit Blogs</h1>
+        <br/>
+        <br/>
+        <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <button class="btn btn-info">Update</button>
+        </div>
+ {% else %}
+ <strong>You Shall not Access!!</strong>
+ {% endif %}
+{% else %}
+<strong>You Shall not Access!!</strong>
+{% endif %}
+{% endblock %}
