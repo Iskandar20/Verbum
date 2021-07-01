@@ -44,4 +44,5 @@ python manage.py runserver
 - SQLite database for entries
 
 ## Screenshots
-
+![Alt Text](Screenshot2.jpeg)
+![Alt Text](Screenshot1.jpeg)
