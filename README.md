@@ -15,7 +15,7 @@ A simple blog page which allows users to add,edit and manage blogposts as well a
 
 ## How to run:
 
-Download or clone the repo. Downlaod or update to the latest version of python and in the command prompt run the following command
+Download or clone the repo. Download or update to the latest version of python and in the command prompt run the following command
 
 ```
 pip install -r requirements.txt
